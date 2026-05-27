@@ -1,1 +1,108 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroturismo Paraná - Descubra nossas raízes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><i class="fa-solid fa-leaf"></i> AgroTurismo <span>Paraná</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Vivencie o Campo Paranaense</h1>
+            <p>Conheça as rotas do café, vinhos, colônias históricas e a força do nosso agronegócio.</p>
+            <a href="#destinos" class="btn-principal">Explorar Rotas</a>
+        </div>
+    </section>
+
+    <section id="destinos" class="section-padding">
+        <h2 class="section-title">Rotas Turísticas Populares</h2>
+        <div class="grid-destinos">
+            
+            <div class="card">
+                <div class="card-img card-cafe"></div>
+                <div class="card-body">
+                    <h3>Rota do Café (Norte)</h3>
+                    <p>Resgate a história do "ouro verde" no Paraná. Visite fazendas históricas, entenda a produção e degustar cafés premiados.</p>
+                    <button class="btn-saber-mais" onclick="mostrarDetalhes('cafe')">Saber Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img card-vinho"></div>
+                <div class="card-body">
+                    <h3>Caminhos do Vinho (São José dos Pinhais)</h3>
+                    <p>Uma imersão na cultura italiana com dezenas de vinícolas, restaurantes coloniais, cafés coloniais e produtos artesanais.</p>
+                    <button class="btn-saber-mais" onclick="mostrarDetalhes('vinho')">Saber Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img card-holandes"></div>
+                <div class="card-body">
+                    <h3>Colônias Holandesas (Campos Gerais)</h3>
+                    <p>Conheça a tecnologia do agro em Castrolanda e Carambeí. Moinhos holandeses, cooperativas de leite e tortas famosas.</p>
+                    <button class="btn-saber-mais" onclick="mostrarDetalhes('agro')">Saber Mais</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-bg section-padding">
+        <div class="sobre-container">
+            <h2>O Poder do Agro e do Turismo</h2>
+            <p>O Paraná é um dos maiores produtores agrícolas do Brasil. O agroturismo une a beleza das nossas terras, a riqueza cultural dos imigrantes e a força da produção rural, permitindo que você viva a rotina do campo com conforto e hospitalidade.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding">
+        <h2 class="section-title">Planeje sua Viagem</h2>
+        <div class="form-container">
+            <form id="agroForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required placeholder="seu.email@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="rota">Rota de Interesse:</label>
+                    <select id="rota">
+                        <option value="cafe">Rota do Café</option>
+                        <option value="vinho">Caminhos do Vinho</option>
+                        <option value="colonia">Colônias Holandesas</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-enviar">Solicitar Informações</button>
+            </form>
+            <div id="mensagemSucesso" class="hidden"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agroturismo Paraná. Orgulho em cultivar e acolher.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
